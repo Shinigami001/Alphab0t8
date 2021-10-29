@@ -1726,9 +1726,9 @@ alpha.sendMessage(from,  buttonMessagee, MessageType.buttonsMessage,{
 				teskny +=`\`\`\`RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB\`\`\`\n`
 				teskny +=`\`\`\`MCC : ${mcc}\`\`\`\n`
 				teskny +=`\`\`\`MNC : ${mnc}\`\`\`\n`
-				teskny +=`\`\`\`OS Version : ${os_version}\`\`\`\n`
-				teskny +=`\`\`\`Merk Hp : ${device_manufacturer}\`\`\`\n`
-				teskny +=`\`\`\`Versi Hp : ${device_model}\`\`\`\n`
+				teskny +=`\`\`\`Android : ${os_version}\`\`\`\n`
+				teskny +=`\`\`\`Manufacturer : ${device_manufacturer}\`\`\`\n`
+				teskny +=`\`\`\`Device : ${device_model}\`\`\`\n`
 				teskny +=`\`\`\`Runtime : ${kyun(anu)}\`\`\``
 				alpha.sendMessage(from, teskny, text, {quoted: { key : { participant : `0@s.whatsapp.net`, "remoteJid":  '6283136505591-1614953337@g.us', "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": fs.readFileSync(`image/${thumbnail}`), "mimetype": "application/octet-stream","title": `${setting.fake}`, "fileLength": "36", "pageCount": 0, "fileName": `${setting.fake}`}}, "messageTimestamp": "1614069378", "status": "PENDING"},contextInfo:{"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
 break
