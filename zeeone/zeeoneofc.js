@@ -13,9 +13,9 @@ ${petik}│◦➛${ucapannya}
 
 ┌❏ *DEVICE*
 ${petik}│◦➛Whatsapp : ${wa_version}
-│◦➛Merk HP : ${device_manufacturer}
-│◦➛Versi HP : ${device_model}
-│◦➛Versi OS : ${os_version}
+│◦➛Manufacturer : ${device_manufacturer}
+│◦➛Device : ${device_model}
+│◦➛Android : ${os_version}
 │◦➛RAM : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │◦➛MCC : ${mcc}
 └❏ MNC : ${mnc}${petik}
@@ -384,6 +384,7 @@ ${petik}│◦ ${prefix}autoketik${petik} on / off
 ${petik}│◦ ${prefix}autovn${petik} on / off
 ${petik}│◦ ${prefix}antihidetag${petik} on / off
 ${petik}│◦ ${prefix}autobio${petik} on / off
+${petik}│◦ ${prefix}autorespon${petik} on / off
 ${petik}│◦ ${prefix}setthumb
 │◦ ${prefix}settarget
 │◦ ${prefix}setfakeimg
