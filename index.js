@@ -3804,7 +3804,7 @@ _Uploading file..._`
 					keya = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					delb = await alpha.downloadMediaMessage(keya)
 					imagenye.push(`${svst}`)
-					fs.writeFileSync(`./media/foto/${svst}.jpeg`, delb)
+					fs.writeFileSync(`./media/foto/${svst}.jpg`, delb)
 					fs.writeFileSync('./temp/image.json', JSON.stringify(imagenye))
 					fakegroup(`Sukses Menambahkan image\nCek dengan cara ${prefix}listimg`)
 					break
