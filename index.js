@@ -176,8 +176,8 @@ let _diamond11 = '⦿ M.MINGGUAN';      let diamond11 = 'Rp 30.000,00';
 let _diamond12 = '⦿ M.BULANAN';         let diamond12 = 'Rp 110.000,00';
 
 img = setting.img
-baper = 'Jangan Di Klik'
-apiku = 'https://youtu.be/2rWbjrDIAyA'
+baper = 'NEKO BOT'
+apiku = 'https://youtu.be/'
 gc_wa_lu = 'https://chat.whatsapp.com/EU890BcXjyBDkNaUT5WmYV' //klo gk punya gc wa gk usah di ganti 👍
 targetpc = setting.ownerNumberr
 owner = targetpc
@@ -601,10 +601,10 @@ key: {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`image/${thumbnail}`) //Gambarnye
 					},
-					"title": 'Whatsapp bot', 
+					"title": 'NEKO BOT', 
 					"description": "SELF BOT", 
 					"currencyCode": "IDR",
-					"priceAmount1000": "70000000",
+					"priceAmount1000": "999999999",
 					"retailerId": 'Whatsapp bot',
 					"productImageCount": 1
 				},
@@ -823,7 +823,7 @@ var _0xb082=["\u274C","\u2B55\uFE0F","","\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x2
             if (isAfk(mek.key.remoteJid)) return
             addafk(mek.key.remoteJid)
             heheh = ms(Date.now() - waktu) 
-            alpha.sendMessage(mek.key.remoteJid,`@${owner} Sedang Offline!\n\n*Alasan :* ${alasan}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`, MessageType.text,{contextInfo:{ mentionedJid: [`${owner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`image/${thumbnail}`)}}}})
+            alpha.sendMessage(mek.key.remoteJid,`@${owner} Sedang Offline!\n\n*Alasan :* ${alasan}\n*Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nApa yang ingin anda sampaikan kepada Saya? Jika penting hubungi Saya lagi`, MessageType.text,{contextInfo:{ mentionedJid: [`${owner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`image/${thumbnail}`)}}}})
             }
             }   
         if (mek.key.remoteJid.endsWith('@g.us') && offline) {
@@ -836,7 +836,7 @@ var _0xb082=["\u274C","\u2B55\uFE0F","","\x0A\x20\x20\x20\x20\x20\x20\x20\x20\x2
         if (isAfk(mek.key.remoteJid)) return
         addafk(mek.key.remoteJid)
         heheh = ms(Date.now() - waktu)
-        alpha.sendMessage(mek.key.remoteJid,`@${owner} Sedang Offline!\n\n *Alasan :* ${alasan}\n *Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nSilahkan Hubungi Lagi Nanti`, MessageType.text,{contextInfo:{ mentionedJid: [`${owner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`image/${thumbnail}`)}}}})
+        alpha.sendMessage(mek.key.remoteJid,`@${owner} Sedang Offline!\n\n *Alasan :* ${alasan}\n *Sejak :* ${heheh.hours} Jam, ${heheh.minutes} Menit, ${heheh.seconds} Detik lalu\n\nApa yang ingin anda sampaikan kepada Saya? Jika penting hubungi Saya lagi`, MessageType.text,{contextInfo:{ mentionedJid: [`${owner}@s.whatsapp.net`],'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': "0@s.whatsapp.net", 'remoteJid': 'status@broadcast', 'quotedMessage': {"imageMessage": {"caption": "*OFFLINE*", 'jpegThumbnail': fs.readFileSync(`image/${thumbnail}`)}}}})
           }
         }
             }
@@ -1713,6 +1713,7 @@ alpha.sendMessage(from,  buttonMessagee, MessageType.buttonsMessage,{
             case 'botstat': 
             case 'botstatus': 
 			case 'mystatus':
+			case 'ping':
 				anu = process.uptime()
                 teskny = `B O T  S T A T I S T I C\n`
 				teskny +=`\`\`\`Group Chat : ${giid.length}\`\`\`\n`
@@ -2926,7 +2927,6 @@ break
 		            fakegroup(teks)
 		            break  
 			case 'speed':
-			case 'ping':
 			const timestamp = speed();
 					const latensi = speed() - timestamp
 					exec(`neofetch --stdout`, (error, stdout, stderr) => {
