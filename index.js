@@ -4417,6 +4417,35 @@ reply(lang.anjawaOff(command))
           ]);
         }
         break;
+        case 'autorespon': case 'autorespond':
+      if (!isOwner && !isCoOwner && !mek.key.fromMe) return reply(lang.onlyOwner())
+       if (q === 'on'){
+           	if (autorespon === false) return reply(lang.anjawaUdhOn(command))
+              autorespon = false
+                    reply(lang.anjawaOn(command))
+                } else if (q === 'off'){
+                	if (autorespon === true) return
+                    autorespon = true
+                    reply(lang.anjawaOff(command))
+                } else if (!q) {
+          sendButMessage(from, `MODE AUTO RESPON`, `Choose one`, [
+            {
+              buttonId: 'autorespon on',
+              buttonText: {
+                displayText: `On`,
+              },
+              type: 1,
+            },
+            {
+              buttonId: 'autorespon off',
+              buttonText: {
+                displayText: `Off`,
+              },
+              type: 1,
+            },
+          ]);
+        }
+        break;
 case 'autobio':
 if (!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
 if (args[0] === "on") {
