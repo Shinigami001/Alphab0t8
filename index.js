@@ -3797,35 +3797,25 @@ _Uploading file..._`
 					break
 					
 			case 'addimg':
-				if (!isQuotedImage) return reply('Reply imagenya')
-				svst = body.slice(8)
-				if (!svst) return reply('Nama imagenya apa')
-				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-				delb = await ikyy.downloadMediaMessage(boij)
-				imagenye.push(`${svst}`)
-				fs.writeFileSync(`./temp/foto/${svst}.jpeg`, delb)
-				fs.writeFileSync('./temp/image.json', JSON.stringify(imagenye))
-				alpha.sendMessage(from, `Sukses Menambahkan image\nCek dengan cara ${prefix}listimg`, MessageType.text, { quoted: troli })
-				break
-
-			case 'getimg':
-				namastc = body.slice(8)
-				try {
-				buffer = fs.readFileSync(`./temp/foto/${namastc}.jpeg`)
-				alpha.sendMessage(from, buffer, image, { quoted: troli, caption: `Result From Database : ${namastc}.jpeg` })
-				} catch {
-				  reply('Pack tidak terdaftar')
-				}
-				break
-				case 'listimg':
-				teks = '*Image list :*\n\n'
-				for (let awokwkwk of imagenye) {
-					teks += `- ${awokwkwk}\n`
-				}
-				teks += `\n*Total : ${imagenye.length}*`
-				alpha.sendMessage(from, teks.trim(), extendedText, { quoted: troli, contextInfo: { "mentionedJid": setiker } })
-				break
-				
+			if(!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
+					if (!isQuotedImage) return fakegroup('```Reply imagenya```')
+					clara = body.slice(8)
+					if (!clara) return fakegroup('```Nama imagenya apa```')
+					keya = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+					delb = await alpha.downloadMediaMessage(keya)
+					imagenye.push(`${svst}`)
+					fs.writeFileSync(`./media/foto/${svst}.jpeg`, delb)
+					fs.writeFileSync('./temp/image.json', JSON.stringify(imagenye))
+					fakegroup(`Sukses Menambahkan image\nCek dengan cara ${prefix}listimg`)
+					break
+			case 'listimg':
+					teks = '*Image list :*\n\n'
+					for (let awokwkwk of imagenye) {
+						teks += `- ${awokwkwk}\n`
+					}
+					teks += `\n*Total : ${imagenye.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama foto/image_`
+					fakegroup(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
+					break
 			case 'addvid':
 			if(!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
 					if (!isQuotedVideo) return fakegroup('```Reply vidionya```')
