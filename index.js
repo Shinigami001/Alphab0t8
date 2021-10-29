@@ -2881,10 +2881,6 @@ ${anime.desc}\n\n*Link Batch* : ${anime.batch}\n*Link Download SD* : ${anime.bat
 					}
 					})
 				    break 
-				case 'baal'
-				baal = 'https://i.ibb.co/r52PB78/83c9237560da.jpg'
-				let buf = await getBuffer(baal)
-				break
 		    case 'join':
 		            if (!mek.key.fromMe && !isOwner && !isCoOwner) return reply(lang.onlyOwner())
 		            try {
